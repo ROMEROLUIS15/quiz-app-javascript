@@ -3,6 +3,8 @@ import dbQuestions from "./data/questions.json";
 import "./App.css";
 import Questions from "./components/Questions";
 
+const letGo = "Let's go!!!"
+
 function App() {
   const [questions, setQuestions] = useState([]);
 
@@ -18,7 +20,7 @@ function App() {
     <main className="bg-black min-h-screen flex justify-center items-center text-white text-center px-4">
       <section>
         <h1 className="text-4xl font-bold">
-          Preguntas <span className="text-yellow-300">JS</span>
+        Quiz game <span className="text-yellow-300">JS</span>
         </h1>
 
         {questions.length === 0 && (
@@ -26,7 +28,7 @@ function App() {
             onClick={handleStartQuestions}
             className="bg-yellow-400 p-2 px-4 rounded-md mt-5 mx-auto block text-black font-bold text-lg hover:bg-yellow-300 transition-colors"
           >
-            Vamos!!
+            {letGo}
           </button>
         )}
 
